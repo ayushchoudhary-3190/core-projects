@@ -40,7 +40,7 @@ func (hc *HealthChecker) AddCheck(name string, check func() error) {
 // - Runs all registered checks
 // - Returns 200 and {"status":"healthy",...} if all pass
 // - Returns 503 and {"status":"unhealthy",...} if any fail
-// TODO: Implement this function
+// TODO: Implement this function 
 func (hc *HealthChecker) Handler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request){
 		response := HealthResponse{
